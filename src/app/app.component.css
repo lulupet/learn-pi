@@ -1,0 +1,31 @@
+.main-wrapper {
+  text-align: center;
+}
+
+input {
+  margin-top: 150px;
+  height: 100px;
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px brown;
+  font-size: 40px;
+}
+
+.end-wrapper {
+  margin-top: 40px;
+}
+
+.warning {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.restart-button {
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: auto;
+}
