@@ -2,7 +2,11 @@
 <div class="main-wrapper">
   <input name="pi-input" [(ngModel)]="piValue" (keyup)="onKey($event)">
   <div class="end-wrapper" *ngIf="isLost">
-    <div class="warning">You lost, you guessed {{ piValue.length - 1 }} decimals of pi.</div>
+    <div class="warning">
+      You lost, you guessed {{ piValue.length - 1 }} decimals of pi.
+      <br>
+      The righ decimal was {{ realPiValue.slice(piValue.length - 1, piValue.length) }}
+    </div>
     <div class="restart-button" (click)="restartGame()">Restart</div>
   </div>
 </div>
