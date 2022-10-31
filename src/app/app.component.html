@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <div class="main-wrapper">
-  <input name="pi-input" [(ngModel)]="piValue" (keyup)="onKey($event)">
+  <div class="score" *ngIf="!isLost">{{ piValue.length }}</div>
+  <div class="score" *ngIf="isLost">{{ piValue.length - 1 }}</div>
+  <div class="best">Your record is {{ bestScore }} decimals.</div>
+  <input name="pi-input" [(ngModel)]="piValue" (keyup)="onKey($event)" [disabled]="isLost">
   <div class="end-wrapper" *ngIf="isLost">
     <div class="warning">
       You lost, you guessed {{ piValue.length - 1 }} decimals of pi.
